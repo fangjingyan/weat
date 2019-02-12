@@ -14,7 +14,7 @@ public class RestaurantController {
     @Autowired
     private RestaurantRepository restaurantRepository;
 
-    @RequestMapping("/")
+    @RequestMapping("/hello")
     public String hello() {
         return "hello world";
     }
