@@ -1,3 +1,13 @@
-.idea/
-weat.iml
-target/
+Server/.idea/
+Server/weat.iml
+Server/target/
+
+UI/*.iml
+UI/.gradle
+UI/local.properties
+UI/.idea/
+.DS_Store
+UI/build
+UI/captures
+UI/.externalNativeBuild
+
