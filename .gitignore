@@ -2,12 +2,12 @@ Server/.idea/
 Server/weat.iml
 Server/target/
 
-UI/*.iml
-UI/.gradle
-UI/local.properties
-UI/.idea/
+Client/*.iml
+Client/.gradle
+Client/local.properties
+Client/.idea/
 .DS_Store
-UI/build
-UI/captures
-UI/.externalNativeBuild
+Client/build
+Client/captures
+Client/.externalNativeBuild
 
