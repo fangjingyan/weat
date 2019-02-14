@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_selectrestaurant"
+        android:icon="@drawable/ic_selectrestaurant_black_24dp"
+        android:title="Select Restaurant" />
+
+    <item
+        android:id="@+id/navigation_cookyourself"
+        android:icon="@drawable/ic_cookyourself_black_24dp"
+        android:title="Cook yourself" />
+
+    <item
+        android:id="@+id/navigation_blog"
+        android:icon="@drawable/ic_blog_black_24dp"
+        android:title="Blog" />
+
+</menu>
