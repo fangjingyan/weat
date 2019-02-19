@@ -9,6 +9,7 @@ Server/.settings/
 bin/
 
 
+Client/app/*.iml
 Client/*.iml
 Client/.gradle
 Client/local.properties

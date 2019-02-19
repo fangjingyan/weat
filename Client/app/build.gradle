@@ -16,6 +16,28 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    packagingOptions {
+        pickFirst 'test-file-utf8-win-linebr.bin'
+        pickFirst 'test-file-empty.bin'
+        pickFirst 'test-file-gbk.bin'
+        pickFirst 'test-file-utf16le.bin'
+        pickFirst 'org/apache/commons/io/FileUtilsTestDataCR.dat'
+        pickFirst 'org/apache/commons/io/FileUtilsTestDataLF.dat'
+        pickFirst 'test-file-x-windows-949.bin'
+        pickFirst 'test-file-iso8859-1-shortlines-win-linebr.bin'
+        exclude 'org/apache/commons/io/FileUtilsTestDataCRLF.dat'
+        exclude 'test-file-utf8-cr-only.bin'
+        exclude 'test-file-simple-utf8.bin'
+        exclude 'test-file-utf16be.bin'
+        exclude 'test-file-utf8.bin'
+        exclude 'org/apache/commons/io/testfileNoBOM.xml'
+        exclude 'test-file-shiftjis.bin'
+        exclude 'test-file-windows-31j.bin'
+        exclude 'test-file-x-windows-950.bin'
+        exclude 'test-file-20byteslength.bin'
+        exclude 'test-file-iso8859-1.bin'
+        exclude 'org/apache/commons/io/testfileBOM.xml'
+    }
 }
 
 dependencies {
@@ -28,4 +50,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation files('libs/commons-io-2.6.jar')
 }
