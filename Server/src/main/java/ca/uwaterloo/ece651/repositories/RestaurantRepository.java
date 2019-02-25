@@ -1,6 +1,6 @@
-package ca.uwaterloo.ece651.repository;
+package ca.uwaterloo.ece651.repositories;
 
-import ca.uwaterloo.ece651.model.Restaurant;
+import ca.uwaterloo.ece651.models.Restaurant;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
