@@ -1,7 +1,7 @@
-package ca.uwaterloo.ece651.controller;
+package ca.uwaterloo.ece651.controllers;
 
-import ca.uwaterloo.ece651.model.Restaurant;
-import ca.uwaterloo.ece651.repository.RestaurantRepository;
+import ca.uwaterloo.ece651.models.Restaurant;
+import ca.uwaterloo.ece651.repositories.RestaurantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
