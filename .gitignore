@@ -1,6 +1,13 @@
 Server/.idea/
 Server/weat.iml
 Server/target/
+.classpath
+.project
+Server/.classpath
+Server/.project
+Server/.settings/
+bin/
+
 
 Client/*.iml
 Client/.gradle
