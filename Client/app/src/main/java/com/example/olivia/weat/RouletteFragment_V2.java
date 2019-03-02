@@ -1,9 +1,6 @@
 package com.example.olivia.weat;
 
 
-import android.animation.Animator;
-import android.animation.AnimatorInflater;
-import android.animation.AnimatorListenerAdapter;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Build;
@@ -11,21 +8,20 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.RotateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.view.View.OnClickListener;
 
 import java.util.Random;
 
@@ -33,7 +29,7 @@ import java.util.Random;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class RouletteFragment extends Fragment {
+public class RouletteFragment_V2 extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -49,18 +45,18 @@ public class RouletteFragment extends Fragment {
     SharedPreferences sharedPreferences;
 
     ImageView selected;
-    PaintView imageRoulette;
+    PaintView_V2 imageRoulette;
     Button b_start;
     Button b_list;
 
 
-    public RouletteFragment() {
+    public RouletteFragment_V2() {
         // Required empty public constructor
     }
 
 
-    public static RouletteFragment newInstance(String[] param1) {
-        RouletteFragment fragment = new RouletteFragment();
+    public static RouletteFragment_V2 newInstance(String[] param1) {
+        RouletteFragment_V2 fragment = new RouletteFragment_V2();
         Bundle args = new Bundle();
         args.putStringArray(ARG_PARAM1, param1);
         fragment.setArguments(args);
@@ -72,15 +68,23 @@ public class RouletteFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater,  ViewGroup container,
                               Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_roulette, container, false);
+        View view = inflater.inflate(R.layout.fragment_roulette_v2, container, false);
 
         String[] streets = getArguments().getStringArray(ARG_PARAM1);
-
         String str = String.join(",", streets);
-
         Log.d("activity to fragment2: ", str);
 
-        imageRoulette = (PaintView)view.findViewById(R.id.PaintView);
+        name = streets;
+
+        RelativeLayout relativelayout = view.findViewById(R.id.relative);
+        imageRoulette = PaintView_V2.newinstance(getContext(), streets);
+        relativelayout.addView(imageRoulette);
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+        params.leftMargin = 38;
+        params.topMargin = 273;
+        imageRoulette.setLayoutParams(params);
+
+//        imageRoulette = (PaintView)view.findViewById(R.id.PaintView);
 
         b_start = (Button)view.findViewById(R.id.buttonStart);
         b_list = (Button)view.findViewById(R.id.buttonList);
