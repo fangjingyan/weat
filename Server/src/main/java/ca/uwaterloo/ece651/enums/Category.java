@@ -4,6 +4,7 @@ public enum Category {
     CHINESE,
     JAPANESE,
     KOREAN,
-    ITALIAN,
-    AMERICAN
+    WESTERN,
+    FASTFOOD,
+    OTHERS
 }
