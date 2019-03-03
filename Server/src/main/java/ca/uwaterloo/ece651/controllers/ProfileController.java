@@ -5,9 +5,5 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ProfileController {
-	
-	@RequestMapping("/")
-	public String profile(){
-        return "This is profile";
-    }
+
 }
