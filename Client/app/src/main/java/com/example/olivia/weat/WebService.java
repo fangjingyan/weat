@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WebService {
-    private static String servlet = "https://powerful-bastion-16516.herokuapp.com/restaurant?Category=Korean";
+    private static String servlet = "https://powerful-bastion-16516.herokuapp.com/restaurant";
 
     static private List<String> restaurants = new ArrayList<String>(){{
         add("Restaurant1"); add("Restaurant2"); add("Restaurant3");
@@ -25,12 +25,11 @@ public class WebService {
     }};
 
     public static List<String> executeHttpGet(List<String> Info){
-//        String path = servlet + "?";
-//        for(String str : Info){
-//            path = path + str + "&";
-//        }
-//        path = path.substring(0, path.length() - 1);
-        String path = servlet;
+        String path = servlet + "?";
+        for(String str : Info){
+            path = path + str + "&";
+        }
+        path = path.substring(0, path.length() - 1);
         Log.e("path is :", path);
         try {
             Log.d("url", path);
@@ -45,13 +44,17 @@ public class WebService {
                 InputStream is = conn.getInputStream();
                 JSONParser jsonParser = new JSONParser();
                 org.json.simple.JSONArray array = (org.json.simple.JSONArray)jsonParser.parse(new InputStreamReader(is, "UTF-8"));
+                List<String> restaurantGet = new ArrayList<>();
                 for(Object obj : array){
                     org.json.simple.JSONObject jsObj = (org.json.simple.JSONObject) obj;
                     Log.e("get name from sever", (String)jsObj.get("name"));
+                    restaurantGet.add((String)jsObj.get("name"));
                 }
 //                String res = IOUtils.toString(is, "utf-8");
                 Log.e("res in WebService", "jsonObject is :"+array);
 //                Log.e("res in WebService", res);
+                if(!restaurantGet.isEmpty())
+                    restaurants = restaurantGet;
                 return restaurants;
             }
         }catch (Exception e){
