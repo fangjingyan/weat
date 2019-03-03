@@ -19,6 +19,7 @@ import java.util.List;
 public class WebService {
     private static String servlet = "https://powerful-bastion-16516.herokuapp.com/restaurant";
 
+//    default restaurant names
     static private List<String> restaurants = new ArrayList<String>(){{
         add("Restaurant1"); add("Restaurant2"); add("Restaurant3");
         add("Restaurant4"); add("Restaurant5"); add("Restaurant6");
@@ -44,14 +45,14 @@ public class WebService {
                 InputStream is = conn.getInputStream();
                 JSONParser jsonParser = new JSONParser();
                 org.json.simple.JSONArray array = (org.json.simple.JSONArray)jsonParser.parse(new InputStreamReader(is, "UTF-8"));
-                List<String> restaurantGet = new ArrayList<>();
+                Log.e("res in WebService", "jsonArray is"+array);
+                List<String> restaurantGet = new ArrayList<>(); //list of restaurant names from backend
                 for(Object obj : array){
                     org.json.simple.JSONObject jsObj = (org.json.simple.JSONObject) obj;
                     Log.e("get name from sever", (String)jsObj.get("name"));
                     restaurantGet.add((String)jsObj.get("name"));
                 }
 //                String res = IOUtils.toString(is, "utf-8");
-                Log.e("res in WebService", "jsonObject is :"+array);
 //                Log.e("res in WebService", res);
                 if(!restaurantGet.isEmpty())
                     restaurants = restaurantGet;
@@ -60,7 +61,7 @@ public class WebService {
         }catch (Exception e){
             e.printStackTrace();
         }
-        Log.e("WebService Error", "do not get message from sever");
+        Log.e("WebService Error", "do not get message from sever or an exception");
         return restaurants;
     }
 }
