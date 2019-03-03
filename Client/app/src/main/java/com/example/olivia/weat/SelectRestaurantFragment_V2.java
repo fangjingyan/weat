@@ -130,12 +130,12 @@ public class SelectRestaurantFragment_V2 extends Fragment {
             selectConditions.add("Category="+categoryMessage);
             selectConditions.add("Price="+priceMessage);
             selectConditions.add("Rating="+ratingMessage);
-//            List<String> restaurants = WebService.executeHttpGet(selectConditions);
+            List<String> restaurants = WebService.executeHttpGet(selectConditions);
             // need to change
-            List<String> restaurants = new ArrayList<String>();
-            restaurants.add("street1");
-            restaurants.add("street2");
-            restaurants.add("street3");
+//            List<String> restaurants = new ArrayList<String>();
+//            restaurants.add("street1");
+//            restaurants.add("street2");
+//            restaurants.add("street3");`
 
             String restaurants_Info = String.join(",", restaurants);
 //            String restaurants_Info = "";
