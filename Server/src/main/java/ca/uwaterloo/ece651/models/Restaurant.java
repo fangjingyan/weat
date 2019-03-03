@@ -1,8 +1,6 @@
 package ca.uwaterloo.ece651.models;
 
 import ca.uwaterloo.ece651.enums.Category;
-import ca.uwaterloo.ece651.enums.Province;
-import ca.uwaterloo.ece651.enums.City;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,17 +16,8 @@ public class Restaurant {
     private Long id;
     private String name;
     private Category category;
-    // 24-hour format: hh:mm
-    private String openTime;
-    // 24-hour format: hh:mm
-    private String closeTime;
     private Integer price;
     private Double rate;
-    private String street;
-    private City city;
-    private Province province;
-    // format: XXX XXX
-    private String postCode;
 
     public Long getId() {
         return id;
@@ -54,22 +43,6 @@ public class Restaurant {
         this.category = category;
     }
 
-    public String getOpenTime() {
-        return openTime;
-    }
-
-    public void setOpenTime(String openTime) {
-        this.openTime = openTime;
-    }
-
-    public String getCloseTime() {
-        return closeTime;
-    }
-
-    public void setCloseTime(String closeTime) {
-        this.closeTime = closeTime;
-    }
-
     public Integer getPrice() {
         return price;
     }
@@ -86,35 +59,4 @@ public class Restaurant {
         this.rate = rate;
     }
 
-    public String getStreet() {
-        return street;
-    }
-
-    public void setStreet(String street) {
-        this.street = street;
-    }
-
-    public City getCity() {
-        return city;
-    }
-
-    public void setCity(City city) {
-        this.city = city;
-    }
-
-    public Province getProvince() {
-        return province;
-    }
-
-    public void setProvince(Province province) {
-        this.province = province;
-    }
-
-    public String getPostCode() {
-        return postCode;
-    }
-
-    public void setPostCode(String postCode) {
-        this.postCode = postCode;
-    }
 }

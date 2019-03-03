@@ -15,18 +15,11 @@ public class DishController {
 	 private DishRepository dishRepository;
 	 
 	 @RequestMapping("/dish")
-	    public String Dish() {
-	        return "this is dish";
-	    }
-	 
-	 @RequestMapping("/")
-	 public String test3() {
-		 Dish dish = new Dish();
-		 dish.setName("Test dish");
-		 dishRepository.save(dish);
-		 return "dish inserted";
-	 }	 
-	@RequestMapping("/get")	 
+	 public String Dish() {
+	 	return "this is dish";
+	 }
+
+	 @RequestMapping("/get")
 	 public String test4() {
         Iterable<Dish> dishes = dishRepository.findAll();
         for (Dish dish: dishes) {

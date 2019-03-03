@@ -1,13 +1,11 @@
 package ca.uwaterloo.ece651.models;
 
 import ca.uwaterloo.ece651.enums.Category;
-import ca.uwaterloo.ece651.enums.Ingredient;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.util.List;
 
 @Entity
 public class Dish {
@@ -16,7 +14,6 @@ public class Dish {
     private Long id;
     private String name;
     private Category category;
-    private List<Ingredient> ingredients;
 
     public Long getId() {
         return id;
@@ -42,11 +39,4 @@ public class Dish {
         this.category = category;
     }
 
-    public List<Ingredient> getIngredients() {
-        return ingredients;
-    }
-
-    public void setIngredients(List<Ingredient> ingredients) {
-        this.ingredients = ingredients;
-    }
 }
