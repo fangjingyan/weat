@@ -9,6 +9,9 @@ import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.view.View;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 /**
  * TODO: document your custom view class.
  */
@@ -76,7 +79,7 @@ public class PaintView_V2 extends View {
             canvas.drawArc(rect, currentStartAngle, angle, true, PaintArc);
             float x = (float) ((r / 2 + 70) * Math.cos((currentStartAngle + (angle/2)) * Math.PI * 2 / 360));
             float y = (float) ((r / 2 + 70) * Math.sin((currentStartAngle + (angle/2)) * Math.PI * 2 / 360));
-            canvas.drawText(name[i], x, y, PaintText);
+            canvas.drawText(String.valueOf(i+1), x, y, PaintText);
 
             currentStartAngle += angle;
         }
