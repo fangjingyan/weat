@@ -14,6 +14,7 @@ public class Dish {
     private Long id;
     private String name;
     private Category category;
+    private String ingredients;
 
     public Long getId() {
         return id;
@@ -37,6 +38,14 @@ public class Dish {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+    
+    public String getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(String ingredients) {
+        this.ingredients = ingredients;
     }
 
 }
