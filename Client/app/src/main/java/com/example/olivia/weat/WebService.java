@@ -52,6 +52,7 @@ public class WebService {
                     Log.e("get name from sever", (String)jsObj.get("name"));
                     restaurantGet.add((String)jsObj.get("name"));
                 }
+//                ???
 //                String res = IOUtils.toString(is, "utf-8");
 //                Log.e("res in WebService", res);
                 if(!restaurantGet.isEmpty())
