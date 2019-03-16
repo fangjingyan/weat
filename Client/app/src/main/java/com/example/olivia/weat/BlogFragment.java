@@ -1,9 +1,13 @@
 package com.example.olivia.weat;
 
 
+<<<<<<< HEAD
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+=======
+import android.content.Intent;
+>>>>>>> 2019.3.16 3:49PM prototype of third page
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
@@ -26,10 +30,15 @@ import java.util.Map;
 public class BlogFragment extends Fragment {
 
     LinearLayout ll;
+<<<<<<< HEAD
     LinearLayout ll2;
     FloatingActionButton write;
     ListView mealsRecord;
     private OnFragmentInteractionListener mListener;
+=======
+    FloatingActionButton write;
+    ListView mealsRecord;
+>>>>>>> 2019.3.16 3:49PM prototype of third page
 
 
     public BlogFragment() {
@@ -43,7 +52,10 @@ public class BlogFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_blog, container, false);
         ll = view.findViewById(R.id.linearLayout);
+<<<<<<< HEAD
         ll2 = view.findViewById(R.id.linearLayout2);
+=======
+>>>>>>> 2019.3.16 3:49PM prototype of third page
         write = view.findViewById(R.id.Write);
         mealsRecord = view.findViewById(R.id.Meals);
         setUser();
@@ -56,6 +68,7 @@ public class BlogFragment extends Fragment {
         });
         setMeals();
         return view;
+<<<<<<< HEAD
     }
 
     public void setUser(){
@@ -124,4 +137,39 @@ public class BlogFragment extends Fragment {
 
 
 
+=======
+    }
+
+    public void setUser(){
+        if(User.getUsername()==null){
+            Button login = new Button(getContext());
+            login.setText("Login");
+            ll.addView(login);
+            login.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(getActivity(), LoginActivity.class);
+                    getActivity().startActivityForResult(intent, 1);
+                }
+            });
+        }
+        else{
+            TextView user = new TextView(getContext());
+            user.setText(User.getUsername());
+            ll.addView(user);
+        }
+    }
+
+    public void setMeals(){
+        Map<String, String> meals = User.getMeals();
+        ArrayList<String> records = new ArrayList<>();
+        for(Map.Entry<String, String> entry : meals.entrySet()){
+            String time = entry.getKey();
+            String content = entry.getValue();
+            records.add(time+content);
+        }
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, records);
+        mealsRecord.setAdapter(adapter);
+    }
+>>>>>>> 2019.3.16 3:49PM prototype of third page
 }

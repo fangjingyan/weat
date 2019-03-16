@@ -12,13 +12,21 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+<<<<<<< HEAD
         android:layout_marginTop="116dp"
+=======
+        android:layout_marginTop="152dp"
+>>>>>>> 2019.3.16 3:49PM prototype of third page
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:ems="10"
         android:inputType="textPersonName|textFilter"
         android:text="enter username"
         app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
+=======
+        app:layout_constraintHorizontal_bias="0.509"
+>>>>>>> 2019.3.16 3:49PM prototype of third page
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,12 +36,17 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+<<<<<<< HEAD
+=======
+        android:layout_marginTop="200dp"
+>>>>>>> 2019.3.16 3:49PM prototype of third page
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:ems="10"
         android:inputType="textPassword"
         android:text="enter password"
         app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputpw" />
 
@@ -67,6 +80,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/confirmpassword" />
+=======
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+>>>>>>> 2019.3.16 3:49PM prototype of third page
 
     <TextView
         android:id="@+id/res"
@@ -74,19 +92,28 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
+<<<<<<< HEAD
         android:layout_marginTop="32dp"
+=======
+        android:layout_marginTop="50dp"
+>>>>>>> 2019.3.16 3:49PM prototype of third page
         android:background="@android:color/background_light"
         android:text="register"
         android:textColor="@android:color/background_dark"
         android:textSize="24sp"
+<<<<<<< HEAD
         android:textStyle="bold"
         app:fontFamily="Open Sans"
+=======
+        android:textStyle="italic"
+>>>>>>> 2019.3.16 3:49PM prototype of third page
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/register"
         android:layout_width="123dp"
+<<<<<<< HEAD
         android:layout_height="33dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
@@ -134,5 +161,17 @@
         app:layout_constraintHorizontal_bias="0.325"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
+=======
+        android:layout_height="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="180dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="Register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent" />
+>>>>>>> 2019.3.16 3:49PM prototype of third page
 
 </android.support.constraint.ConstraintLayout>

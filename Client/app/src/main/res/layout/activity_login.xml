@@ -7,19 +7,33 @@
     tools:context=".LoginActivity">
 
     <EditText
+<<<<<<< HEAD
         android:id="@+id/email"
+=======
+        android:id="@+id/username"
+>>>>>>> 2019.3.16 3:49PM prototype of third page
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+<<<<<<< HEAD
         android:layout_marginTop="120dp"
+=======
+        android:layout_marginTop="152dp"
+>>>>>>> 2019.3.16 3:49PM prototype of third page
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:ems="10"
         android:inputType="textPersonName|textFilter"
+<<<<<<< HEAD
         android:text="enter email"
         app:fontFamily="Open Sans"
         app:layout_constraintEnd_toEndOf="parent"
+=======
+        android:text="enter username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+>>>>>>> 2019.3.16 3:49PM prototype of third page
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,22 +43,35 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+<<<<<<< HEAD
         android:layout_marginTop="192dp"
+=======
+        android:layout_marginTop="200dp"
+>>>>>>> 2019.3.16 3:49PM prototype of third page
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:ems="10"
         android:inputType="textPassword"
         android:text="enter password"
         app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
+=======
+        app:layout_constraintHorizontal_bias="0.505"
+>>>>>>> 2019.3.16 3:49PM prototype of third page
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+<<<<<<< HEAD
         android:id="@+id/log"
+=======
+        android:id="@+id/logres"
+>>>>>>> 2019.3.16 3:49PM prototype of third page
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
+<<<<<<< HEAD
         android:layout_marginTop="32dp"
         android:background="@android:color/background_light"
         android:text="login"
@@ -52,11 +79,20 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:fontFamily="Open Sans"
+=======
+        android:layout_marginTop="50dp"
+        android:background="@android:color/background_light"
+        android:text="login/register"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        android:textStyle="italic"
+>>>>>>> 2019.3.16 3:49PM prototype of third page
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/login"
+<<<<<<< HEAD
         android:layout_width="130dp"
         android:layout_height="36dp"
         android:layout_marginEnd="8dp"
@@ -70,10 +106,23 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
+=======
+        android:layout_width="123dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="180dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="Login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+>>>>>>> 2019.3.16 3:49PM prototype of third page
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/register"
+<<<<<<< HEAD
         android:layout_width="130dp"
         android:layout_height="36dp"
         android:layout_marginTop="24dp"
@@ -104,5 +153,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login" />
+=======
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="370dp"
+        android:background="@android:color/background_light"
+        android:text="do not have an account? Register here"
+        android:textAllCaps="false"
+        android:textColor="@android:color/background_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+>>>>>>> 2019.3.16 3:49PM prototype of third page
 
 </android.support.constraint.ConstraintLayout>
