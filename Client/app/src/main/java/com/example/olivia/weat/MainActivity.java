@@ -1,5 +1,6 @@
 package com.example.olivia.weat;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity implements SelectRestaurantF
 
     boolean blnButtonRotation = true;
 
+    private int returnCode = 0;
+
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
@@ -32,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements SelectRestaurantF
                             selectedFragment = new SelectIngredientFragment();
                             break;
                         case R.id.navigation_blog:
-                            selectedFragment = new LoginFragment();
+                            selectedFragment = new BlogFragment();
                             break;
                     }
 
@@ -55,6 +58,26 @@ public class MainActivity extends AppCompatActivity implements SelectRestaurantF
         PaintView paintView = new PaintView(this);
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        if(resultCode == RESULT_OK)
+            returnCode = requestCode;
+    }
+
+    @Override
+    public void onPostResume(){
+        super.onPostResume();
+        switch(returnCode){
+            case 1:
+                Log.e("in main successfully", "get from login");
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new BlogFragment()).addToBackStack(null).commit();
+                break;
+            case 2:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new BlogFragment()).addToBackStack(null).commit();
+            default:
+        }
+        returnCode = 0;
+    }
 
     @Override
     public void onFragmentInteraction(Uri uri) {
