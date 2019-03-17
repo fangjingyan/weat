@@ -1,5 +1,11 @@
 package ca.uwaterloo.ece651.controllers;
 
+/*import java.security.KeyPair;
+import java.security.KeyPairGenerator;
+import java.security.Signature;
+
+import javax.crypto.Cipher;
+*/
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -14,9 +20,9 @@ public class ProfileController {
 	@Autowired
 	private ProfileRepository profileRepository;
 
-	@GetMapping("/testProfile")
+	@GetMapping("/home")
 	public String profile() {
-		return "this is profile";
+		return "home";
 	}
 
 	@GetMapping("/register")
@@ -25,27 +31,26 @@ public class ProfileController {
 			@RequestParam(value = "Username", defaultValue = "") String username) {
 
 		Profile profile = profileRepository.findByEmail(email);
-		if(profile != null)
-			return "Error: Email "+email+" exists in database!";
-		
+		if (profile != null)
+			return "Error: Email " + email + " exists in database!";
+
 		profile = new Profile();
-		
+
 		profile.setEmail(email);
 		profile.setUsername(username);
 		profile.setPassword(password);
-		
+
 		profileRepository.save(profile);
-		
-		return "Profile Record Inserted";
+
+		return "User Record Registered";
 	}
 
 	@GetMapping("/login")
-	public String login(@RequestParam(value = "Email", defaultValue = "") String email,
+	public Profile login(@RequestParam(value = "Email", defaultValue = "") String email,
 			@RequestParam(value = "Password", defaultValue = "") String password) {
-		
+
 		Profile profile = profileRepository.findByEmailAndPassword(email, password);
-		if(profile != null)
-			return profile.toString();
-		return "There is no entry for the provided email and password in DB!";
+		return profile;
 	}
+
 }

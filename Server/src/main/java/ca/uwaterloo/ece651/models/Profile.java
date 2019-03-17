@@ -18,17 +18,6 @@ public class Profile {
     private String password;
     private String username;
     
-//    private Set<Role> roles;
-    
-/*    private String active;
-    
-	public String getActive() {
-		return active;
-	}
-	public void setActive(String active) {
-		this.active = active;
-	}
-*/
 	public Long getId() {
 		return id;
 	}
@@ -53,11 +42,5 @@ public class Profile {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	@Override
-	public String toString() {
-		return "Profile [email=" + email + ", password=" + password + ", username=" + username + "]";
-	}
-   
-	
 	
 }
