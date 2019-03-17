@@ -126,11 +126,11 @@ public class SelectRestaurantFragment_V2 extends Fragment {
         @RequiresApi(api = Build.VERSION_CODES.O)
         @Override
         public void run(){
-            List<String> selectConditions = new ArrayList<String>();
-            selectConditions.add("Category="+categoryMessage);
-            selectConditions.add("Price="+priceMessage);
-            selectConditions.add("Rating="+ratingMessage);
-            List<String> restaurants = WebService.executeHttpGet(selectConditions);
+            Map<String, String> selectConditions = new HashMap<>();
+            selectConditions.put("Category", categoryMessage);
+            selectConditions.put("Price", priceMessage);
+            selectConditions.put("Rating", ratingMessage);
+            List<String> restaurants = WebService.executeHttpGetRestaurants(selectConditions);
             // need to change
 //            List<String> restaurants = new ArrayList<String>();
 //            restaurants.add("street1");
@@ -138,10 +138,6 @@ public class SelectRestaurantFragment_V2 extends Fragment {
 //            restaurants.add("street3");`
 
             String restaurants_Info = String.join(",", restaurants);
-//            String restaurants_Info = "";
-//            for(String street: restaurants)
-//                restaurants_Info = restaurants_Info  + street + ",";
-//            restaurants_Info = restaurants_Info.substring(0, restaurants_Info.length()-1);
             mListener.onFragmentInteraction(Uri.parse(restaurants_Info));
         }
     }
