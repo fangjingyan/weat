@@ -1,14 +1,246 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".SelectIngredientFragment">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="vertical"
+    android:fadingEdge="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        tools:context=".SelectRestaurantFragment"
+        android:paddingTop="10dp"
+        android:paddingBottom="8dp">
 
-</FrameLayout>
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="186dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Tell me what you have"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            app:fontFamily="casual"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/meat"
+            android:layout_width="86dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="88dp"
+            android:text="Meat"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:fontFamily="serif"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/Pork"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/pork"
+            app:layout_constraintStart_toStartOf="@+id/meat"
+            app:layout_constraintTop_toBottomOf="@+id/meat" />
+
+        <Button
+            android:id="@+id/Beef"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="168dp"
+            android:layout_marginLeft="168dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/beef"
+            app:layout_constraintStart_toStartOf="@+id/meat"
+            app:layout_constraintTop_toBottomOf="@+id/meat" />
+
+        <Button
+            android:id="@+id/Mutton"
+            android:layout_width="47dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="78dp"
+            android:background="@drawable/mutton"
+            app:layout_constraintStart_toStartOf="@+id/meat"
+            app:layout_constraintTop_toBottomOf="@+id/meat" />
+
+        <Button
+            android:id="@+id/Chicken"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="168dp"
+            android:layout_marginLeft="168dp"
+            android:layout_marginTop="78dp"
+            android:background="@drawable/chicken"
+            app:layout_constraintStart_toStartOf="@+id/meat"
+            app:layout_constraintTop_toBottomOf="@+id/meat" />
+
+        <Button
+            android:id="@+id/Egg"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="328dp"
+            android:layout_marginLeft="328dp"
+            android:layout_marginTop="78dp"
+            android:background="@drawable/egg"
+            app:layout_constraintStart_toStartOf="@+id/meat"
+            app:layout_constraintTop_toBottomOf="@+id/meat" />
+
+        <TextView
+            android:id="@+id/vegetable"
+            android:layout_width="105dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="264dp"
+            android:text="Vegetable"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:fontFamily="serif"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/Tomato"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/tomato"
+            app:layout_constraintStart_toStartOf="@+id/vegetable"
+            app:layout_constraintTop_toBottomOf="@+id/vegetable" />
+
+        <Button
+            android:id="@+id/Onion"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="78dp"
+            android:background="@drawable/onion"
+            app:layout_constraintStart_toStartOf="@+id/vegetable"
+            app:layout_constraintTop_toBottomOf="@+id/vegetable" />
+
+        <Button
+            android:id="@+id/Potato"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="168dp"
+            android:layout_marginLeft="168dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/potato"
+            app:layout_constraintStart_toStartOf="@+id/vegetable"
+            app:layout_constraintTop_toBottomOf="@+id/vegetable" />
+
+        <Button
+            android:id="@+id/Cabbage"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="328dp"
+            android:layout_marginLeft="328dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/cabbage"
+            app:layout_constraintStart_toStartOf="@+id/vegetable"
+            app:layout_constraintTop_toBottomOf="@+id/vegetable" />
+
+        <Button
+            android:id="@+id/Spinach"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="168dp"
+            android:layout_marginLeft="168dp"
+            android:layout_marginTop="78dp"
+            android:background="@drawable/spinach"
+            app:layout_constraintStart_toStartOf="@+id/vegetable"
+            app:layout_constraintTop_toBottomOf="@+id/vegetable" />
+
+        <Button
+            android:id="@+id/Green_pepper"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="328dp"
+            android:layout_marginLeft="328dp"
+            android:layout_marginTop="78dp"
+            android:background="@drawable/green_pepper"
+            app:layout_constraintStart_toStartOf="@+id/vegetable"
+            app:layout_constraintTop_toBottomOf="@+id/vegetable" />
+
+        <Button
+            android:id="@+id/Dou_fu"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="328dp"
+            android:layout_marginLeft="328dp"
+            android:layout_marginTop="148dp"
+            android:background="@drawable/doufu"
+            app:layout_constraintStart_toStartOf="@+id/vegetable"
+            app:layout_constraintTop_toBottomOf="@+id/vegetable" />
+
+        <Button
+            android:id="@+id/Broccoli"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="168dp"
+            android:layout_marginLeft="168dp"
+            android:layout_marginTop="148dp"
+            android:background="@drawable/broccoli"
+            app:layout_constraintStart_toStartOf="@+id/vegetable"
+            app:layout_constraintTop_toBottomOf="@+id/vegetable" />
+
+        <Button
+            android:id="@+id/Corn"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="148dp"
+            android:background="@drawable/corn"
+            app:layout_constraintStart_toStartOf="@+id/vegetable"
+            app:layout_constraintTop_toBottomOf="@+id/vegetable" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginTop="540dp"
+            android:text="Let's go"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/Fish"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="328dp"
+            android:layout_marginLeft="328dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/fish"
+            app:layout_constraintStart_toStartOf="@+id/meat"
+            app:layout_constraintTop_toBottomOf="@+id/meat" />
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
