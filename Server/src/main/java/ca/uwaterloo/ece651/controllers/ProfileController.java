@@ -14,38 +14,32 @@ public class ProfileController {
 	@Autowired
 	private ProfileRepository profileRepository;
 
-	@GetMapping("/testProfile")
-	public String profile() {
-		return "this is profile";
-	}
-
 	@GetMapping("/register")
-	public String registration(@RequestParam(value = "Email", defaultValue = "") String email,
+	public int registration(@RequestParam(value = "Email", defaultValue = "") String email,
 			@RequestParam(value = "Password", defaultValue = "") String password,
 			@RequestParam(value = "Username", defaultValue = "") String username) {
 
 		Profile profile = profileRepository.findByEmail(email);
-		if(profile != null)
-			return "Error: Email "+email+" exists in database!";
-		
+		if (profile != null)
+			return 0;
+
 		profile = new Profile();
-		
+
 		profile.setEmail(email);
 		profile.setUsername(username);
 		profile.setPassword(password);
-		
+
 		profileRepository.save(profile);
-		
-		return "Profile Record Inserted";
+
+		return 1;
 	}
 
 	@GetMapping("/login")
-	public String login(@RequestParam(value = "Email", defaultValue = "") String email,
+	public Profile login(@RequestParam(value = "Email", defaultValue = "") String email,
 			@RequestParam(value = "Password", defaultValue = "") String password) {
-		
+
 		Profile profile = profileRepository.findByEmailAndPassword(email, password);
-		if(profile != null)
-			return profile.toString();
-		return "There is no entry for the provided email and password in DB!";
+		return profile;
 	}
+
 }
