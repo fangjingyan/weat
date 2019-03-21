@@ -16,7 +16,9 @@ import java.util.Map;
 public class RecordActivity extends AppCompatActivity {
 
     private Button ok;
-    private EditText time;
+    private EditText date;
+    private EditText day;
+    private EditText sort;
     private EditText content;
 
     Handler handler = new Handler();
@@ -26,7 +28,9 @@ public class RecordActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_record);
         ok = findViewById(R.id.OK);
-        time = findViewById(R.id.time);
+        date = findViewById(R.id.date);
+        day = findViewById(R.id.day);
+        sort = findViewById(R.id.sort);
         content = findViewById(R.id.content);
         ok.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -38,30 +42,45 @@ public class RecordActivity extends AppCompatActivity {
 
     public class RecordRunnable implements Runnable{
         @Override
-        public void run(){
+        public void run() {
             Log.e("message", "into RecordRunnable");
-            String timeString = time.getText().toString();
+            String timeString = null;
+            String dateString = date.getText().toString();
+            String dayString = day.getText().toString();
+            String sortString = sort.getText().toString();
             String contentString = content.getText().toString();
+            timeString = dateString + dayString + sortString;
             User.addMeal(timeString, contentString);
-            if(User.getUsername() == null)
-                return;
-            Map<String, String> record = new HashMap<>();
-            record.put(timeString, contentString);
-            Log.e("timeString", timeString);
-            Log.e("contentString", contentString);
-            final boolean success = WebService.executeHTTPGetAddRecord(record);
-            handler.post(new Runnable(){
-                @Override
-                public void run(){
-                    if(success){
-                        Intent intent = new Intent();
-                        setResult(RESULT_OK, intent);
-                        finish();
+            if (User.getUsername() != null) {
+                Map<String, String> record = new HashMap<>();
+                record.put(timeString, contentString);
+                Log.e("timeString", timeString);
+                Log.e("contentString", contentString);
+                final boolean success = WebService.executeHTTPGetAddRecord(record);
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (success) {
+                            Intent intent = new Intent();
+                            setResult(RESULT_OK, intent);
+                            finish();
+                        } else
+                            Toast.makeText(getBaseContext(), "unsuccessfully add record to account", Toast.LENGTH_LONG).show();
                     }
-                    else
-                        Toast.makeText(getBaseContext(), "unsuccessfully add record to account", Toast.LENGTH_LONG).show();
-                }
-            });
+                });
+            }
+            else {
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                            Intent intent = new Intent();
+                            setResult(RESULT_OK, intent);
+                            finish();
+                    }
+                });
+            }
+
         }
     }
+
 }

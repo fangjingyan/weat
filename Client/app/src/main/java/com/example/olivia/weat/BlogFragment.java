@@ -121,4 +121,7 @@ public class BlogFragment extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction2();
     }
+
+
+
 }
