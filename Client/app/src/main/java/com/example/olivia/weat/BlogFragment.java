@@ -1,7 +1,9 @@
 package com.example.olivia.weat;
 
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
@@ -24,8 +26,10 @@ import java.util.Map;
 public class BlogFragment extends Fragment {
 
     LinearLayout ll;
+    LinearLayout ll2;
     FloatingActionButton write;
     ListView mealsRecord;
+    private OnFragmentInteractionListener mListener;
 
 
     public BlogFragment() {
@@ -39,6 +43,7 @@ public class BlogFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_blog, container, false);
         ll = view.findViewById(R.id.linearLayout);
+        ll2 = view.findViewById(R.id.linearLayout2);
         write = view.findViewById(R.id.Write);
         mealsRecord = view.findViewById(R.id.Meals);
         setUser();
@@ -70,6 +75,16 @@ public class BlogFragment extends Fragment {
             TextView user = new TextView(getContext());
             user.setText(User.getUsername());
             ll.addView(user);
+            Button logout = new Button((getContext()));
+            logout.setText("Logout");
+            ll2.addView(logout);
+            logout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    //transaction
+                    mListener.onFragmentInteraction2();
+                }
+            });
         }
     }
 
@@ -83,5 +98,27 @@ public class BlogFragment extends Fragment {
         }
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, records);
         mealsRecord.setAdapter(adapter);
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mListener = null;
+    }
+
+    @Override
+    public void onAttach(Context activity) {
+        super.onAttach(activity);
+        try {
+            mListener = (BlogFragment.OnFragmentInteractionListener) activity;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(activity.toString()
+                    + " must implement OnFragmentInteractionListener");
+        }
+    }
+
+    public interface OnFragmentInteractionListener {
+        // TODO: Update argument type and name
+        void onFragmentInteraction2();
     }
 }
