@@ -18,6 +18,8 @@ public class RegisterActivity extends AppCompatActivity {
 
     private EditText username;
     private EditText password;
+    private EditText confirmpassword;
+    private EditText email;
     private Button register;
 
     private Handler handler = new Handler();
@@ -38,15 +40,26 @@ public class RegisterActivity extends AppCompatActivity {
     public void sendRegister(){
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
+        confirmpassword = findViewById(R.id.confirmpassword);
+        email = findViewById(R.id.email);
 
-        new Thread(new RegisterRunnable()).start();
+        String pw = password.getText().toString();
+        String confirmpw = confirmpassword.getText().toString();
+        if (pw.equals(confirmpw))
+        {
+            new Thread(new RegisterRunnable()).start();
+        }
+        else
+        {
+            Toast.makeText(this,"Enter the right password",Toast.LENGTH_LONG).show();
+        }
     }
 
     public class RegisterRunnable implements Runnable{
         @Override
         public void run(){
-            String user = username.toString();
-            String pass = password.toString();
+            String user = username.getText().toString();
+            String pass = password.getText().toString();
             Map<String, String> newUser = new HashMap<>();
             newUser.put(user, pass);
             final boolean success = WebService.executeHTTPGetRegister(newUser);
