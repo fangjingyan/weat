@@ -17,7 +17,25 @@
         android:layout_marginTop="8dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="104dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="288dp"
+        android:layout_marginLeft="288dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <View
         android:id="@+id/divider1"
@@ -56,7 +74,8 @@
         android:layout_marginTop="64dp"
         android:text="Record"
         android:textSize="24sp"
-        app:fontFamily="serif"
+        android:textStyle="bold"
+        app:fontFamily="Open Sans"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -69,7 +88,7 @@
         android:layout_marginRight="32dp"
         android:clickable="true"
         android:src="@android:drawable/ic_menu_add"
-        app:backgroundTint="@android:color/darker_gray"
+        app:backgroundTint="@android:color/holo_orange_dark"
         app:fabCustomSize="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

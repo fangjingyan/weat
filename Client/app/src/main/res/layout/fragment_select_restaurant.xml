@@ -9,18 +9,18 @@
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:id="@+id/title"
-        android:layout_width="186dp"
-        android:layout_height="30dp"
+        android:layout_width="209dp"
+        android:layout_height="27dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="Find your restaurant"
         android:textColor="@android:color/background_dark"
-        android:textSize="18sp"
-        android:textStyle="italic"
-        app:fontFamily="casual"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:fontFamily="Open Sans"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,7 +37,7 @@
         android:textColor="@android:color/background_dark"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:fontFamily="serif"
+        app:fontFamily="Open Sans"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -118,7 +118,7 @@
         android:textColor="@android:color/background_dark"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:fontFamily="serif"
+        app:fontFamily="Open Sans"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -166,7 +166,7 @@
         android:textColor="@android:color/background_dark"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:fontFamily="serif"
+        app:fontFamily="Open Sans"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -213,6 +213,10 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="100dp"
         android:text="Let's go"
+        android:textStyle="bold"
+        app:fontFamily="Open Sans"
+        android:background="@android:color/holo_orange_dark"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"

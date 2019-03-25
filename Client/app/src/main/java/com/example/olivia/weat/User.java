@@ -7,6 +7,7 @@ public class User {
     static private String username = null;
     static private Map<String, String> meals = new HashMap<>();
 
+
     static public String getUsername(){
         return username;
     }
@@ -22,4 +23,9 @@ public class User {
     static public void setUsername(String user){
         username = user;
     }
+
+    static public void clearUsername() {username = null;}
+
+    static public void clearMap() {meals.clear();}
+
 }
