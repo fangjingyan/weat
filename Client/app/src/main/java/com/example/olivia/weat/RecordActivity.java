@@ -49,7 +49,7 @@ public class RecordActivity extends AppCompatActivity {
             String dayString = day.getText().toString();
             String sortString = sort.getText().toString();
             String contentString = content.getText().toString();
-            timeString = dateString + dayString + sortString;
+            timeString = dateString + " " + dayString + " " +sortString;
             User.addMeal(timeString, contentString);
             if (User.getUsername() != null) {
                 Map<String, String> record = new HashMap<>();

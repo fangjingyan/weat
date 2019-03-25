@@ -94,7 +94,7 @@ public class BlogFragment extends Fragment {
         for(Map.Entry<String, String> entry : meals.entrySet()){
             String time = entry.getKey();
             String content = entry.getValue();
-            records.add(time+content);
+            records.add(time+"\n"+content);
         }
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, records);
         mealsRecord.setAdapter(adapter);
