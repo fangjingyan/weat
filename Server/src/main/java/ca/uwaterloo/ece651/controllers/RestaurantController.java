@@ -111,6 +111,10 @@ public class RestaurantController {
         else if (r != 0.0) {
             result = restaurantRepository.findByRate(r);
         }
+        else
+        {
+        	result = restaurantRepository.findAll();
+        }
 
         return result;
     }
