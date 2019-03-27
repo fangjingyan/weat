@@ -6,7 +6,7 @@ import java.util.Map;
 public class User {
     static private String username = null;
     static private Map<String, String> meals = new HashMap<>();
-
+    static private String userID = null;
 
     static public String getUsername(){
         return username;
@@ -16,6 +16,8 @@ public class User {
         return meals;
     }
 
+    static public String getUserID() { return userID; }
+
     static public void addMeal(String time, String content){
         meals.put(time, content);
     }
@@ -23,6 +25,8 @@ public class User {
     static public void setUsername(String user){
         username = user;
     }
+
+    static public void setUserID(String uID) {userID = uID; }
 
     static public void clearUsername() {username = null;}
 

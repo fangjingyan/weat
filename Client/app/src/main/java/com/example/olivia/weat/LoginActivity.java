@@ -17,7 +17,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private Button login;
     private Button register;
-    private EditText username;
+    private EditText email;
     private EditText password;
 
     private Handler handler = new Handler();
@@ -49,13 +49,14 @@ public class LoginActivity extends AppCompatActivity {
     public class LoginRunnable implements Runnable{
         @Override
         public void run(){
-            username = findViewById(R.id.username);
+            email = findViewById(R.id.email);
             password = findViewById(R.id.password);
-            String user = username.getText().toString();
+            String em = email.getText().toString();
             String pass = password.getText().toString();
 
             Map<String, String> loginInfo = new HashMap<>();
-            loginInfo.put(user, pass);
+            loginInfo.put("Email", em);
+            loginInfo.put("Password", pass);
             final boolean success = WebService.executeHTTPGetLogin(loginInfo);
             Log.e("User username", User.getUsername());
             handler.post(new Runnable(){

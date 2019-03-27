@@ -18,5 +18,5 @@ public interface RestaurantRepository extends CrudRepository<Restaurant, Long> {
     List<Restaurant> findByPriceAndRate(Integer price, Double rate);
 
     List<Restaurant> findByCategoryAndPriceAndRate(Category category, Integer price, Double rate);
-
+    List<Restaurant> findAll();
 }

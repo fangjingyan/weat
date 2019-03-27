@@ -14,7 +14,8 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 
-public class MainActivity extends AppCompatActivity implements SelectRestaurantFragment_V2.OnFragmentInteractionListener, BlogFragment.OnFragmentInteractionListener{
+public class MainActivity extends AppCompatActivity implements SelectRestaurantFragment_V2.OnFragmentInteractionListener ,
+        SelectIngredientFragment.OnFragmentInteractionListener1,BlogFragment.OnFragmentInteractionListener {
 
 
     boolean blnButtonRotation = true;
@@ -91,6 +92,22 @@ public class MainActivity extends AppCompatActivity implements SelectRestaurantF
         transaction.addToBackStack(null);
         transaction.commit();
     }
+    public void onFragmentInteraction1(Uri uri) {
+//        Toast.makeText(this,uri.toString(),Toast.LENGTH_LONG).show();
+        Log.d("fragment1 to activity: ", uri.toString());
+        String[] streets = uri.toString().split(",");
+//        passvaluetocv(uri);
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction transaction = fm.beginTransaction();
+        DisplayFragment bf2 = DisplayFragment.newInstance(streets); //transmit streets to roulette
+        transaction.replace(R.id.fragment_container, bf2);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+//    public void passvaluetocv(Uri uri){
+//        PaintView paintView = findViewById(R.id.PaintView);
+//        paintView.setString(uri.toString());
+//    }
 
     @Override
     public void onFragmentInteraction2(){
@@ -99,6 +116,5 @@ public class MainActivity extends AppCompatActivity implements SelectRestaurantF
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new BlogFragment()).addToBackStack(null).commit();
 
     }
-
 
 }
