@@ -34,17 +34,17 @@ public class RestaurantController {
             if (category.equals("Chinese")) {
                 c = Category.CHINESE;
             }
-            else if (category.equals("Korean")) {
-                c = Category.KOREAN;
+            else if (category.equals("JAndK")) {
+                c = Category.JANDK;
             }
-            else if (category.equals("Japanese")) {
-                c = Category.JAPANESE;
+            else if (category.equals("American")) {
+                c = Category.AMERICAN;
             }
-            else if (category.equals("Western")) {
-                c = Category.WESTERN;
+            else if (category.equals("European")) {
+                c = Category.EUROPEAN;
             }
-            else if (category.equals("Fastfood")) {
-                c = Category.FASTFOOD;
+            else if (category.equals("Middleeast")) {
+                c = Category.MIDDLEEAST;
             }
             else if (category.equals("Others")) {
                 c = Category.OTHERS;
