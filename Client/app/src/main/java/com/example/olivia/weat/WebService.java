@@ -166,11 +166,7 @@ public class WebService {
                     User.addMeal(time, content);
                 }
             }
-            else
-
-
-
-
+            
 
             return true;
         }catch(Exception e){
