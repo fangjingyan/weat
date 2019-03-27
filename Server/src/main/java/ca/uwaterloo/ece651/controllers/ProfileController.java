@@ -41,7 +41,7 @@ public class ProfileController {
 		Profile profile = profileRepository.findByEmailAndPassword(email, password);
 		if (profile == null) {
 			profile = new Profile();
-			profile.setId(new Long(-1));
+			profile.setId(-1L);
 		}
 		return profile;
 	}
