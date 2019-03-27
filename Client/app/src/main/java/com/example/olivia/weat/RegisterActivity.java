@@ -60,8 +60,11 @@ public class RegisterActivity extends AppCompatActivity {
         public void run(){
             String user = username.getText().toString();
             String pass = password.getText().toString();
+            String em = email.getText().toString();
             Map<String, String> newUser = new HashMap<>();
-            newUser.put(user, pass);
+            newUser.put("Username", user);
+            newUser.put("Password", pass);
+            newUser.put("Email", em);
             final boolean success = WebService.executeHTTPGetRegister(newUser);
             handler.post(new Runnable(){
                 @Override
