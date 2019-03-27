@@ -21,37 +21,6 @@ public class RestaurantController {
         return "hello world";
     }
 
-    @RequestMapping("/load_restaurants")
-    public String loadRestaurants() {
-        Restaurant restaurant = new Restaurant();
-
-        restaurant.setName("Kabob Hut");
-        restaurant.setCategory(Category.OTHERS);
-        restaurant.setPrice(2);
-        restaurant.setRate(4.4);
-        restaurantRepository.save(restaurant);
-
-        restaurant.setName("Waterloo Star");
-        restaurant.setCategory(Category.CHINESE);
-        restaurant.setPrice(1);
-        restaurant.setRate(3.6);
-        restaurantRepository.save(restaurant);
-
-        restaurant.setName("River and Lake Best Food House");
-        restaurant.setCategory(Category.CHINESE);
-        restaurant.setPrice(1);
-        restaurant.setRate(3.2);
-        restaurantRepository.save(restaurant);
-
-        restaurant.setName("Seoul Seoul");
-        restaurant.setCategory(Category.KOREAN);
-        restaurant.setPrice(1);
-        restaurant.setRate(2.5);
-        restaurantRepository.save(restaurant);
-
-        return "Restaurant Records Inserted";
-    }
-
     @RequestMapping("/restaurant")
     public List<Restaurant> getRestaurants(@RequestParam(value = "Category", defaultValue = "") String category,
                                @RequestParam(value = "Price", defaultValue = "") String price,

@@ -8,10 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
-import java.util.Date;
-import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.text.ParseException;
 
 @Controller
@@ -21,6 +21,7 @@ public class RecordController {
     private RecordRepository recordRepository;
 
     @RequestMapping("/new_record")
+    @ResponseBody
     public int uploadRecord(@RequestParam(value = "Uid", defaultValue = "") String uid,
                             @RequestParam(value = "Date", defaultValue = "") String date,
                             @RequestParam(value = "Day", defaultValue = "") String day,
@@ -40,8 +41,7 @@ public class RecordController {
             return 0;
         }
         else {
-            Date inputDate = new SimpleDateFormat("dd-MM-yyyy").parse(date);
-            record.setDate(inputDate);
+            record.setDate(date);
         }
 
         if ("".equals(day)) {
@@ -100,10 +100,15 @@ public class RecordController {
     }
 
     @RequestMapping("/get_records")
+    @ResponseBody
     public List<Record> getRecord(@RequestParam(value = "Uid", defaultValue = "") String uid) {
         if ("".equals(uid)) {
             return null;
         }
-        return recordRepository.findByUid(Long.valueOf(uid));
+        List<Record> result = recordRepository.findByUid(Long.valueOf(uid));
+        if (result == null) {
+            result = new ArrayList<>();
+        }
+        return result;
     }
 }
