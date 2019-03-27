@@ -53,7 +53,11 @@ public class RecordActivity extends AppCompatActivity {
             User.addMeal(timeString, contentString);
             if (User.getUsername() != null) {
                 Map<String, String> record = new HashMap<>();
-                record.put(timeString, contentString);
+                record.put("Uid", User.getUserID());
+                record.put("Date", dateString);
+                record.put("Day", dayString);
+                record.put("Meal", sortString);
+                record.put("Content", contentString);
                 Log.e("timeString", timeString);
                 Log.e("contentString", contentString);
                 final boolean success = WebService.executeHTTPGetAddRecord(record);
