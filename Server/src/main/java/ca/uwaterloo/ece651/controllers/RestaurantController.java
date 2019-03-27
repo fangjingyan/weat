@@ -56,7 +56,7 @@ public class RestaurantController {
         }
 
         if (!rate.equals("")) {
-            r = Double.valueOf(rate);
+            r = Double.valueOf(rate) + 1.0;
         }
 
         if (c != null && p != 0 && r != 0.0) {
@@ -83,6 +83,10 @@ public class RestaurantController {
         else
         {
         	result = restaurantRepository.findAll();
+        }
+
+        if (result.size() > 10) {
+            result = result.subList(0, 9);
         }
 
         return result;
