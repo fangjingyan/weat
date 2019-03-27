@@ -105,18 +105,6 @@ public class DishController {
 		 return result;
 		 
 	 }
-	 
-	 
-	 
-	 @RequestMapping("/get")
-	 public String test4() {
-        Iterable<Dish> dishes = dishRepository.findAll();
-        for (Dish dish: dishes) {
-            System.out.println(dish.getName());
-        }
-        return "done";
-	 }
-	
 }
 
 	 

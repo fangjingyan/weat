@@ -39,6 +39,10 @@ public class ProfileController {
 			@RequestParam(value = "Password", defaultValue = "") String password) {
 
 		Profile profile = profileRepository.findByEmailAndPassword(email, password);
+		if (profile == null) {
+			profile = new Profile();
+			profile.setId(new Long(-1));
+		}
 		return profile;
 	}
 
