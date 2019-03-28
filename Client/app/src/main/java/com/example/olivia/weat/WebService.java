@@ -27,13 +27,8 @@ public class WebService {
         add("Restaurant4"); add("Restaurant5"); add("Restaurant6");
     }};
 
-<<<<<<< HEAD
     public static InputStream executeHttpGet(Map<String, String> info, String dir){
         String path = servlet + dir +  "?";
-=======
-    public static InputStream executeHttpGet(Map<String, String> info){
-        String path = servlet + "?";
->>>>>>> 2019.3.16 3:49PM prototype of third page
         for(Map.Entry<String, String> entry : info.entrySet()){
             String key = entry.getKey();
             String value = entry.getValue();
@@ -53,7 +48,6 @@ public class WebService {
                 Log.e("get", "get response");
                 InputStream is = conn.getInputStream();
                 return is;
-<<<<<<< HEAD
             }
         }catch (Exception e){
             e.printStackTrace();
@@ -107,8 +101,6 @@ public class WebService {
                 Log.e("get", "get response");
                 InputStream is = conn.getInputStream();
                 return is;
-=======
->>>>>>> 2019.3.16 3:49PM prototype of third page
             }
         }catch (Exception e){
             e.printStackTrace();
@@ -117,16 +109,10 @@ public class WebService {
         return null;
     }
 
-<<<<<<< HEAD
 
     public static List<String> executeHttpGetDish(Map<String, String> info) {
         try {
             InputStream res = executeHttpGetdish(info);
-=======
-    public static List<String> executeHttpGetRestaurants(Map<String, String> info) {
-        try {
-            InputStream res = executeHttpGet(info);
->>>>>>> 2019.3.16 3:49PM prototype of third page
             JSONParser jsonParser = new JSONParser();
             org.json.simple.JSONArray array = (org.json.simple.JSONArray) jsonParser.parse(new InputStreamReader(res, "UTF-8"));
             Log.e("res in WebService", "jsonArray is" + array);
@@ -148,7 +134,6 @@ public class WebService {
     }
 
     public static boolean executeHTTPGetLogin(Map<String, String> info){
-<<<<<<< HEAD
         try {
             InputStream res = executeHttpGet(info, "login");
             JSONParser jsonParser = new JSONParser();
@@ -214,24 +199,5 @@ public class WebService {
             e.printStackTrace();
         }
         return false;
-=======
-        InputStream res = executeHttpGet(info);
-//        need more processing about res
-        User.setUsername("zhangsan");
-        User.addMeal("2019.3.16", "noddles");
-        return true;
-    }
-
-    public static boolean executeHTTPGetRegister(Map<String, String> info){
-        InputStream res = executeHttpGet(info);
-//      need more processing
-        return true;
-    }
-
-    public static boolean executeHTTPGetAddRecord(Map<String, String> info){
-        InputStream res = executeHttpGet(info);
-//        need more operation
-        return true;
->>>>>>> 2019.3.16 3:49PM prototype of third page
     }
 }
