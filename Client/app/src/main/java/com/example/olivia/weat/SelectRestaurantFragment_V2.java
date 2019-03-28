@@ -39,22 +39,23 @@ public class SelectRestaurantFragment_V2 extends Fragment {
 
     private Map<String, Integer> buttonflag = new HashMap<String, Integer>(){{
         put("Chinese", 0);
-        put("Korean", 0);
-        put("Japanese", 0);
-        put("Western", 0);
-        put("Fastfood", 0);
+        put("JAndK", 0);
+        put("American", 0);
+        put("European", 0);
+        put("Middleeast", 0);
         put("Others", 0);
 
     }};
 
     private List<Integer> buttons = new ArrayList<Integer>(){{
-        add(R.id.Chinese); add(R.id.Korean); add(R.id.Japanese);
-        add(R.id.Western); add(R.id.Fastfood); add(R.id.Others);
+        add(R.id.Chinese); add(R.id.JAndK); add(R.id.American);
+        add(R.id.European); add(R.id.Middleeast); add(R.id.Others);
         add(R.id.D1); add(R.id.D2); add(R.id.D3);
         add(R.id.S1); add(R.id.S2); add(R.id.S3);
     }};
     private List<Integer> categorybuttons = new ArrayList<Integer>(){{
-        add(R.id.Chinese); add(R.id.Korean); add(R.id.Japanese);
+        add(R.id.Chinese); add(R.id.JAndK); add(R.id.American);
+        add(R.id.European); add(R.id.Middleeast); add(R.id.Others);
     }};
     private List<Integer> pricebuttons = new ArrayList<Integer>(){{
         add(R.id.D1); add(R.id.D2); add(R.id.D3);

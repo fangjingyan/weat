@@ -43,8 +43,8 @@
 
     <Button
         android:id="@+id/Chinese"
-        android:layout_width="46dp"
-        android:layout_height="47dp"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
         android:layout_marginStart="52dp"
         android:layout_marginLeft="52dp"
         android:layout_marginTop="120dp"
@@ -53,53 +53,53 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/Korean"
-        android:layout_width="47dp"
-        android:layout_height="43dp"
+        android:id="@+id/JAndK"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
         android:layout_marginStart="176dp"
         android:layout_marginLeft="176dp"
         android:layout_marginTop="120dp"
-        android:background="@drawable/korea"
+        android:background="@drawable/jandk"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/Japanese"
-        android:layout_width="50dp"
+        android:id="@+id/American"
+        android:layout_width="80dp"
         android:layout_height="52dp"
         android:layout_marginStart="284dp"
         android:layout_marginLeft="284dp"
         android:layout_marginTop="120dp"
-        android:background="@drawable/japan"
+        android:background="@drawable/american"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/Western"
-        android:layout_width="47dp"
-        android:layout_height="42dp"
+        android:id="@+id/European"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
         android:layout_marginStart="52dp"
         android:layout_marginLeft="52dp"
         android:layout_marginTop="176dp"
-        android:background="@drawable/western"
+        android:background="@drawable/european"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/Fastfood"
-        android:layout_width="50dp"
-        android:layout_height="48dp"
+        android:id="@+id/Middleeast"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
         android:layout_marginStart="176dp"
         android:layout_marginLeft="176dp"
         android:layout_marginTop="176dp"
-        android:background="@drawable/fastfood"
+        android:background="@drawable/middleeast"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/Others"
-        android:layout_width="55dp"
-        android:layout_height="42dp"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
         android:layout_marginStart="284dp"
         android:layout_marginLeft="284dp"
         android:layout_marginTop="176dp"
@@ -126,19 +126,19 @@
         android:id="@+id/D1"
         android:layout_width="41dp"
         android:layout_height="36dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginLeft="56dp"
-        android:layout_marginTop="272dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/dollar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/price" />
 
     <Button
         android:id="@+id/D2"
         android:layout_width="64dp"
         android:layout_height="37dp"
-        android:layout_marginStart="176dp"
-        android:layout_marginLeft="176dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginLeft="180dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/dollar2"
         app:layout_constraintStart_toStartOf="parent"
@@ -148,8 +148,8 @@
         android:id="@+id/D3"
         android:layout_width="74dp"
         android:layout_height="31dp"
-        android:layout_marginStart="284dp"
-        android:layout_marginLeft="284dp"
+        android:layout_marginStart="288dp"
+        android:layout_marginLeft="288dp"
         android:layout_marginTop="12dp"
         android:background="@drawable/dollar3"
         app:layout_constraintStart_toStartOf="parent"
@@ -174,9 +174,9 @@
         android:id="@+id/S1"
         android:layout_width="36dp"
         android:layout_height="34dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginLeft="56dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/rankstar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rating" />
@@ -185,9 +185,9 @@
         android:id="@+id/S2"
         android:layout_width="63dp"
         android:layout_height="34dp"
-        android:layout_marginStart="176dp"
-        android:layout_marginLeft="176dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/rankstar2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rating" />
@@ -196,9 +196,9 @@
         android:id="@+id/S3"
         android:layout_width="71dp"
         android:layout_height="33dp"
-        android:layout_marginStart="284dp"
-        android:layout_marginLeft="284dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="292dp"
+        android:layout_marginLeft="292dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/rankstar3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rating" />
