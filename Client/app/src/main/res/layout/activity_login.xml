@@ -17,7 +17,7 @@
         android:layout_marginRight="8dp"
         android:ems="10"
         android:inputType="textPersonName|textFilter"
-        android:text="enter email"
+        android:hint="enter email"
         app:fontFamily="Open Sans"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +34,7 @@
         android:layout_marginRight="8dp"
         android:ems="10"
         android:inputType="textPassword"
-        android:text="enter password"
+        android:hint="enter password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

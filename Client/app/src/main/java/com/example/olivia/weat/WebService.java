@@ -58,6 +58,8 @@ public class WebService {
 
     public static List<String> executeHttpGetRestaurants(Map<String, String> info) {
         try {
+            info.put("Price", info.get("Price").replace("D", ""));
+            info.put("Rating", info.get("Rating").replace("S", ""));
             InputStream res = executeHttpGet(info, "restaurant");
             JSONParser jsonParser = new JSONParser();
             org.json.simple.JSONArray array = (org.json.simple.JSONArray) jsonParser.parse(new InputStreamReader(res, "UTF-8"));
