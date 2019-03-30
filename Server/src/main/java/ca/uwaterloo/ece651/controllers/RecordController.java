@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 import java.util.ArrayList;
-import java.text.ParseException;
 
 @Controller
 public class RecordController {
@@ -26,7 +25,7 @@ public class RecordController {
                             @RequestParam(value = "Date", defaultValue = "") String date,
                             @RequestParam(value = "Day", defaultValue = "") String day,
                             @RequestParam(value = "Meal", defaultValue = "") String meal,
-                            @RequestParam(value = "Content", defaultValue = "") String content) throws ParseException{
+                            @RequestParam(value = "Content", defaultValue = "") String content) {
 
         Record record = new Record();
 
