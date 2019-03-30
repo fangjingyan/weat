@@ -16,13 +16,9 @@ import java.util.Map;
 public class RecordActivity extends AppCompatActivity {
 
     private Button ok;
-<<<<<<< HEAD
     private EditText date;
     private EditText day;
     private EditText sort;
-=======
-    private EditText time;
->>>>>>> 2019.3.16 3:49PM prototype of third page
     private EditText content;
 
     Handler handler = new Handler();
@@ -32,13 +28,9 @@ public class RecordActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_record);
         ok = findViewById(R.id.OK);
-<<<<<<< HEAD
         date = findViewById(R.id.date);
         day = findViewById(R.id.day);
         sort = findViewById(R.id.sort);
-=======
-        time = findViewById(R.id.time);
->>>>>>> 2019.3.16 3:49PM prototype of third page
         content = findViewById(R.id.content);
         ok.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -50,7 +42,6 @@ public class RecordActivity extends AppCompatActivity {
 
     public class RecordRunnable implements Runnable{
         @Override
-<<<<<<< HEAD
         public void run() {
             Log.e("message", "into RecordRunnable");
             String timeString = null;
@@ -96,32 +87,4 @@ public class RecordActivity extends AppCompatActivity {
         }
     }
 
-=======
-        public void run(){
-            Log.e("message", "into RecordRunnable");
-            String timeString = time.getText().toString();
-            String contentString = content.getText().toString();
-            User.addMeal(timeString, contentString);
-            if(User.getUsername() == null)
-                return;
-            Map<String, String> record = new HashMap<>();
-            record.put(timeString, contentString);
-            Log.e("timeString", timeString);
-            Log.e("contentString", contentString);
-            final boolean success = WebService.executeHTTPGetAddRecord(record);
-            handler.post(new Runnable(){
-                @Override
-                public void run(){
-                    if(success){
-                        Intent intent = new Intent();
-                        setResult(RESULT_OK, intent);
-                        finish();
-                    }
-                    else
-                        Toast.makeText(getBaseContext(), "unsuccessfully add record to account", Toast.LENGTH_LONG).show();
-                }
-            });
-        }
-    }
->>>>>>> 2019.3.16 3:49PM prototype of third page
 }
