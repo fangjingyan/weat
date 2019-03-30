@@ -54,10 +54,10 @@ public class DishController {
 		        	 fish = "1";
 				 }
 		         if(meats[i].equals("Mutton")){
-		        	 pork = "1";
+		        	 mutton = "1";
 				 }
 		         if(meats[i].equals("Chicken")){
-		        	 mutton = "1";
+		        	 chicken = "1";
 				 }
 		         if(meats[i].equals("Egg")){
 		        	 egg = "1";
@@ -100,7 +100,7 @@ public class DishController {
 			 }			 
 		 }	 
 	       
-		 ingredients = pork + beef + fish +mutton + chicken + egg + potato + tomato + cabbage + onion + spinach + green_pepper + corn+broccoli + douFu;
+		 ingredients = pork + beef + fish + mutton + chicken + egg + potato + tomato + cabbage + onion + spinach + green_pepper + corn + broccoli + douFu;
 		 result = dishRepository.findByIngredientsLike(ingredients);
 		 return result;
 		 
