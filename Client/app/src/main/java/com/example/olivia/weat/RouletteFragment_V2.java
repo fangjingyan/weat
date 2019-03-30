@@ -122,15 +122,14 @@ public class RouletteFragment_V2 extends Fragment {
     private void showDialog(){
         AlertDialog.Builder builder=new AlertDialog.Builder(getActivity());
         builder.setTitle("Restaurants List");
-        String name2[] = name.clone();
+        final String name2[] = name.clone();
         for (int i = 0; i < name.length; i++) {
-            name[i] = String.valueOf(i+1) + ": " + name2[i];
+            name2[i] = String.valueOf(i+1) + ": " + name[i];
         }
-        builder.setItems(name, new DialogInterface.OnClickListener() {
+        builder.setItems(name2, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(getActivity(),name[which], Toast.LENGTH_SHORT).show();
-
+                Toast.makeText(getActivity(),name2[which], Toast.LENGTH_SHORT).show();
             }
         });
 
