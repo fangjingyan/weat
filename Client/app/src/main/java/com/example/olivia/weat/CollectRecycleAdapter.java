@@ -44,7 +44,7 @@ public class CollectRecycleAdapter extends RecyclerView.Adapter<CollectRecycleAd
     public void onBindViewHolder(myViewHodler holder, int position) {
         //根据点击位置绑定数据
         GoodsEntity data = goodsEntityList.get(position);
-//        holder.mItemGoodsImg;
+        //holder.mItemGoodsImg;
         holder.mItemGoodsName.setText(data.goodsName);//获取实体类中的name字段并设置
         //holder.mItemGoodsPrice.setText(data.goodsPrice);//获取实体类中的price字段并设置
 
