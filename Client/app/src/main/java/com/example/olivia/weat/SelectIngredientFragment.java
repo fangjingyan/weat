@@ -111,6 +111,16 @@ public class SelectIngredientFragment extends Fragment {
         for(int id : buttons)
             setButtonFunction(id);
 
+        //set reset function
+        Button reset = getActivity().findViewById(R.id.reset);
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mealMessage = "";
+                vegetableMessage = "";
+            }
+        });
+
         //set submit function
         Button submit = getActivity().findViewById(R.id.submit);
         submit.setOnClickListener(new View.OnClickListener() {
