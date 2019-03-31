@@ -59,7 +59,7 @@
             android:layout_marginStart="52dp"
             android:layout_marginLeft="52dp"
             android:layout_marginTop="8dp"
-            android:background="@drawable/pork"
+            android:background="@drawable/pork1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/meat" />
 
@@ -70,7 +70,7 @@
             android:layout_marginStart="176dp"
             android:layout_marginLeft="176dp"
             android:layout_marginTop="8dp"
-            android:background="@drawable/beef"
+            android:background="@drawable/beef1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/meat" />
 
@@ -81,7 +81,7 @@
             android:layout_marginStart="52dp"
             android:layout_marginLeft="52dp"
             android:layout_marginTop="28dp"
-            android:background="@drawable/mutton"
+            android:background="@drawable/mutton1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Pork" />
 
@@ -92,7 +92,7 @@
             android:layout_marginStart="176dp"
             android:layout_marginLeft="176dp"
             android:layout_marginTop="28dp"
-            android:background="@drawable/chicken"
+            android:background="@drawable/chicken1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Beef" />
 
@@ -103,7 +103,7 @@
             android:layout_marginStart="300dp"
             android:layout_marginLeft="300dp"
             android:layout_marginTop="28dp"
-            android:background="@drawable/egg"
+            android:background="@drawable/egg1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Fish" />
 
@@ -129,7 +129,7 @@
             android:layout_marginStart="52dp"
             android:layout_marginLeft="52dp"
             android:layout_marginTop="16dp"
-            android:background="@drawable/tomato"
+            android:background="@drawable/tomato1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/vegetable" />
 
@@ -151,7 +151,7 @@
             android:layout_marginStart="176dp"
             android:layout_marginLeft="176dp"
             android:layout_marginTop="16dp"
-            android:background="@drawable/potato"
+            android:background="@drawable/potato1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/vegetable" />
 
@@ -162,7 +162,7 @@
             android:layout_marginStart="300dp"
             android:layout_marginLeft="300dp"
             android:layout_marginTop="16dp"
-            android:background="@drawable/cabbage"
+            android:background="@drawable/cabbage1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/vegetable" />
 
@@ -225,14 +225,29 @@
             android:id="@+id/submit"
             android:layout_width="100dp"
             android:layout_height="40dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="24dp"
             android:background="@android:color/holo_orange_dark"
             android:text="Let's go"
             android:textColor="@android:color/white"
             android:textStyle="bold"
             app:fontFamily="Open Sans"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Broccoli" />
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/button_colour"
+            android:text="Reset"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:fontFamily="Open Sans"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Broccoli" />
 
@@ -243,7 +258,7 @@
             android:layout_marginStart="300dp"
             android:layout_marginLeft="300dp"
             android:layout_marginTop="8dp"
-            android:background="@drawable/fish"
+            android:background="@drawable/fish1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/meat" />
     </android.support.constraint.ConstraintLayout>

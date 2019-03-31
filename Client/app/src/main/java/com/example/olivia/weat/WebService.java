@@ -27,6 +27,11 @@ public class WebService {
         add("Restaurant4"); add("Restaurant5"); add("Restaurant6");
     }};
 
+    static private List<String> dishes = new ArrayList<String>(){{
+        add("Dish1"); add("Dish2"); add("Dish3");
+        add("Dish4"); add("Dish5"); add("Dish6");
+    }};
+
     public static InputStream executeHttpGet(Map<String, String> info, String dir){
         String path = servlet + dir +  "?";
         for(Map.Entry<String, String> entry : info.entrySet()){
@@ -118,21 +123,21 @@ public class WebService {
             JSONParser jsonParser = new JSONParser();
             org.json.simple.JSONArray array = (org.json.simple.JSONArray) jsonParser.parse(new InputStreamReader(res, "UTF-8"));
             Log.e("res in WebService", "jsonArray is" + array);
-            List<String> restaurantGet = new ArrayList<>(); //list of restaurant names from backend
+            List<String> dishGet = new ArrayList<>(); //list of restaurant names from backend
             for (Object obj : array) {
                 org.json.simple.JSONObject jsObj = (org.json.simple.JSONObject) obj;
                 Log.e("get name from sever", (String) jsObj.get("name"));
-                restaurantGet.add((String) jsObj.get("name"));
+                dishGet.add((String) jsObj.get("name"));
             }
             //                String res = IOUtils.toString(is, "utf-8");
             //                Log.e("res in WebService", res);
-            if (!restaurantGet.isEmpty())
-                restaurants = restaurantGet;
-            return restaurants;
+            if (!dishGet.isEmpty())
+                dishes = dishGet;
+            return dishes;
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return restaurants;
+        return dishes;
     }
 
     public static boolean executeHTTPGetLogin(Map<String, String> info){
