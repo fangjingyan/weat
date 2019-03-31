@@ -15,6 +15,8 @@ import java.util.Map;
 
 public class RecordActivity extends AppCompatActivity {
 
+    static public boolean flag;
+
     private Button ok;
     private EditText date;
     private EditText day;
@@ -61,6 +63,7 @@ public class RecordActivity extends AppCompatActivity {
                 Log.e("timeString", timeString);
                 Log.e("contentString", contentString);
                 final boolean success = WebService.executeHTTPGetAddRecord(record);
+                flag = success;
                 handler.post(new Runnable() {
                     @Override
                     public void run() {

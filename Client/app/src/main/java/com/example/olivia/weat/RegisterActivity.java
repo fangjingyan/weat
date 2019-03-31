@@ -16,6 +16,8 @@ import static java.security.AccessController.getContext;
 
 public class RegisterActivity extends AppCompatActivity {
 
+    static public boolean flag;
+
     private EditText username;
     private EditText password;
     private EditText confirmpassword;
@@ -66,6 +68,7 @@ public class RegisterActivity extends AppCompatActivity {
             newUser.put("Password", pass);
             newUser.put("Email", em);
             final boolean success = WebService.executeHTTPGetRegister(newUser);
+            flag = success;
             handler.post(new Runnable(){
                 @Override
                 public void run(){
