@@ -57,13 +57,14 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
+
     implementation files('libs/commons-io-2.6.jar')
     implementation 'com.googlecode.json-simple:json-simple:1.1'
 
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test:rules:1.1.1'
-
+    androidTestImplementation 'androidx.test.espresso:espresso-intents:3.1.1'
 
 
 

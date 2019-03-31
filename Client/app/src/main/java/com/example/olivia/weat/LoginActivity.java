@@ -77,6 +77,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void beginRegister(){
         Intent intentRegister = new Intent(LoginActivity.this, RegisterActivity.class);
+        intentRegister.putExtra("Register", "TRUE");
         startActivityForResult(intentRegister, 1);
     }
 

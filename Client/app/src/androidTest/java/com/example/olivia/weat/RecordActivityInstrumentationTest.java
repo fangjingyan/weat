@@ -44,7 +44,7 @@ public class RecordActivityInstrumentationTest {
         sort = (EditText) recordActivity.findViewById(R.id.sort);
         content = (EditText) recordActivity.findViewById(R.id.content);
         //模拟人为向输入框中输入
-        onView(withId(R.id.date)).perform(typeText("2019.03.26"), ViewActions.closeSoftKeyboard());
+        onView(withId(R.id.date)).perform(typeText("2019.04.26"), ViewActions.closeSoftKeyboard());
         onView(withId(R.id.day)).perform(typeText("Tuesday"), ViewActions.closeSoftKeyboard());
         onView(withId(R.id.sort)).perform(typeText("lunch"), ViewActions.closeSoftKeyboard());
         onView(withId(R.id.content)).perform(typeText("rice"), ViewActions.closeSoftKeyboard());
