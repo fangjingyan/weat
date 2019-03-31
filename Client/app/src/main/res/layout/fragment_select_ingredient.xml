@@ -129,7 +129,7 @@
             android:layout_marginStart="52dp"
             android:layout_marginLeft="52dp"
             android:layout_marginTop="16dp"
-            android:background="@drawable/tomato"
+            android:background="@drawable/tomato1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/vegetable" />
 
@@ -151,7 +151,7 @@
             android:layout_marginStart="176dp"
             android:layout_marginLeft="176dp"
             android:layout_marginTop="16dp"
-            android:background="@drawable/potato"
+            android:background="@drawable/potato1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/vegetable" />
 
@@ -162,7 +162,7 @@
             android:layout_marginStart="300dp"
             android:layout_marginLeft="300dp"
             android:layout_marginTop="16dp"
-            android:background="@drawable/cabbage"
+            android:background="@drawable/cabbage1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/vegetable" />
 
