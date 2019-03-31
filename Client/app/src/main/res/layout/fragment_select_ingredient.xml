@@ -140,7 +140,7 @@
             android:layout_marginStart="52dp"
             android:layout_marginLeft="52dp"
             android:layout_marginTop="84dp"
-            android:background="@drawable/onion"
+            android:background="@drawable/onion1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/vegetable" />
 
@@ -173,7 +173,7 @@
             android:layout_marginStart="176dp"
             android:layout_marginLeft="176dp"
             android:layout_marginTop="84dp"
-            android:background="@drawable/spinach"
+            android:background="@drawable/spinach1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/vegetable" />
 
@@ -184,7 +184,7 @@
             android:layout_marginStart="300dp"
             android:layout_marginLeft="300dp"
             android:layout_marginTop="84dp"
-            android:background="@drawable/green_pepper"
+            android:background="@drawable/green_pepper1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/vegetable" />
 
@@ -195,7 +195,7 @@
             android:layout_marginStart="300dp"
             android:layout_marginLeft="300dp"
             android:layout_marginTop="148dp"
-            android:background="@drawable/doufu"
+            android:background="@drawable/doufu1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/vegetable" />
 
@@ -206,7 +206,7 @@
             android:layout_marginStart="176dp"
             android:layout_marginLeft="176dp"
             android:layout_marginTop="148dp"
-            android:background="@drawable/broccoli"
+            android:background="@drawable/broccoli1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/vegetable" />
 
@@ -217,7 +217,7 @@
             android:layout_marginStart="52dp"
             android:layout_marginLeft="52dp"
             android:layout_marginTop="148dp"
-            android:background="@drawable/corn"
+            android:background="@drawable/corn1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/vegetable" />
 
