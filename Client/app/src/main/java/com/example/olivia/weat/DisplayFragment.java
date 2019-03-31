@@ -83,7 +83,7 @@ public class DisplayFragment extends Fragment {
             @Override
             public void OnItemClick(View view, GoodsEntity data) {
                 //此处进行监听事件的业务处理
-                Toast.makeText(getActivity(),"我是item",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(),"Google will tell you how to cook it!",Toast.LENGTH_SHORT).show();
             }
         });
     }
