@@ -1,17 +1,19 @@
 package com.example.olivia.weat;
 
-import androidx.test.runner.AndroidJUnit4;
-import androidx.test.espresso.action.ViewActions;
-import androidx.test.espresso.base.MainThread;
-import androidx.test.filters.LargeTest;
 import android.widget.EditText;
-import androidx.test.rule.ActivityTestRule;
+
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import androidx.test.espresso.action.ViewActions;
+import androidx.test.espresso.base.MainThread;
+import androidx.test.filters.LargeTest;
+import androidx.test.rule.ActivityTestRule;
+import androidx.test.runner.AndroidJUnit4;
 
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
