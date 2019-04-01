@@ -95,7 +95,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="130dp"
-        android:background="@android:color/holo_orange_dark"
+        android:background="@drawable/button_colour"
         android:text="Register"
         android:textColor="@android:color/white"
         android:textStyle="bold"
