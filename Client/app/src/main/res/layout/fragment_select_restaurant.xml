@@ -45,10 +45,10 @@
         android:id="@+id/Chinese"
         android:layout_width="80dp"
         android:layout_height="50dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginLeft="46dp"
         android:layout_marginTop="120dp"
-        android:background="@drawable/chinese"
+        android:background="@drawable/button_transparency"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -56,10 +56,10 @@
         android:id="@+id/JAndK"
         android:layout_width="80dp"
         android:layout_height="50dp"
-        android:layout_marginStart="176dp"
-        android:layout_marginLeft="176dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginLeft="150dp"
         android:layout_marginTop="120dp"
-        android:background="@drawable/jandk"
+        android:background="@drawable/button_jandk"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -67,10 +67,10 @@
         android:id="@+id/American"
         android:layout_width="80dp"
         android:layout_height="52dp"
-        android:layout_marginStart="284dp"
-        android:layout_marginLeft="284dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginLeft="260dp"
         android:layout_marginTop="120dp"
-        android:background="@drawable/american"
+        android:background="@drawable/button_us"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -78,10 +78,10 @@
         android:id="@+id/European"
         android:layout_width="80dp"
         android:layout_height="50dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginLeft="46dp"
         android:layout_marginTop="176dp"
-        android:background="@drawable/european"
+        android:background="@drawable/button_uk"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -89,10 +89,10 @@
         android:id="@+id/Middleeast"
         android:layout_width="80dp"
         android:layout_height="50dp"
-        android:layout_marginStart="176dp"
-        android:layout_marginLeft="176dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginLeft="150dp"
         android:layout_marginTop="176dp"
-        android:background="@drawable/middleeast"
+        android:background="@drawable/button_mideast"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -100,10 +100,10 @@
         android:id="@+id/Others"
         android:layout_width="80dp"
         android:layout_height="50dp"
-        android:layout_marginStart="284dp"
-        android:layout_marginLeft="284dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginLeft="260dp"
         android:layout_marginTop="176dp"
-        android:background="@drawable/others"
+        android:background="@drawable/button_others"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -126,10 +126,10 @@
         android:id="@+id/D1"
         android:layout_width="41dp"
         android:layout_height="36dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginLeft="58dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/dollar"
+        android:background="@drawable/button_d1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/price" />
 
@@ -137,10 +137,10 @@
         android:id="@+id/D2"
         android:layout_width="64dp"
         android:layout_height="37dp"
-        android:layout_marginStart="180dp"
-        android:layout_marginLeft="180dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginLeft="155dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/dollar2"
+        android:background="@drawable/button_d2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/price" />
 
@@ -148,10 +148,10 @@
         android:id="@+id/D3"
         android:layout_width="74dp"
         android:layout_height="31dp"
-        android:layout_marginStart="288dp"
-        android:layout_marginLeft="288dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginLeft="260dp"
         android:layout_marginTop="12dp"
-        android:background="@drawable/dollar3"
+        android:background="@drawable/button_d3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/price" />
 
@@ -174,10 +174,10 @@
         android:id="@+id/S1"
         android:layout_width="36dp"
         android:layout_height="34dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginLeft="58dp"
         android:layout_marginTop="12dp"
-        android:background="@drawable/rankstar"
+        android:background="@drawable/button_s1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rating" />
 
@@ -185,10 +185,10 @@
         android:id="@+id/S2"
         android:layout_width="63dp"
         android:layout_height="34dp"
-        android:layout_marginStart="180dp"
-        android:layout_marginLeft="180dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginLeft="155dp"
         android:layout_marginTop="12dp"
-        android:background="@drawable/rankstar2"
+        android:background="@drawable/button_s2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rating" />
 
@@ -196,10 +196,10 @@
         android:id="@+id/S3"
         android:layout_width="71dp"
         android:layout_height="33dp"
-        android:layout_marginStart="292dp"
-        android:layout_marginLeft="292dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginLeft="260dp"
         android:layout_marginTop="12dp"
-        android:background="@drawable/rankstar3"
+        android:background="@drawable/button_s3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rating" />
 
@@ -219,7 +219,7 @@
         app:fontFamily="Open Sans"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.44"
         app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
