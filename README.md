@@ -1,10 +1,10 @@
 # weat
 
 ## Technology Stack
-front-end: Android studio
-back-end: spring
-database: MySQL
-communiacation: REST API, Json
+* front-end: Android studio
+* back-end: spring
+* database: MySQL
+* communiacation: REST API, Json
 
 ## Modules
 
